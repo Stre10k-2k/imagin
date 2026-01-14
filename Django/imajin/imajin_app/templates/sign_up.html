@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="sign_container">
+            <div class="sign_photo">
+                <img class="sign_img" src="{% static 'imgs/Welcome.png' %}" alt="">
+            </div>
+            <div class="sign">
+                <h1 class="title">Register</h1>
+                <ul class="links">
+                    <li class="link_item">
+                        <a href=""><img src="{% static '/imgs/Facebook Login.png' %}" alt="Facebook"></a>
+                    </li>
+                    <li class="link_item">
+                        <a href=""><img src="{% static '/imgs/Twitter Login.png' %}" alt="Facebook"></a>
+                    </li>
+                    <li class="link_item">
+                        <a href=""><img src="{% static '/imgs/Google Login.png' %}" alt="Facebook"></a>
+                    </li>
+                </ul>
+                <form method="post" class="sign_form">
+                    <input class="text_input" type="text" name="first_name" placeholder="Name">
+                    <input class="text_input" type="text" name="email" placeholder="Email">
+                    <div>
+                        <input class="sign_password" type="text" name="password" placeholder="Password">
+                        <input class="sign_password" type="text" name="confirm_password" placeholder="Repeat Password">
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="" id="">
+                        <p class="checktext">I have read and accept the Terms of <br> Service & Privacy Policy *</p>
+                    </div>
+                    <button class="sign_btn">Continiue</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
