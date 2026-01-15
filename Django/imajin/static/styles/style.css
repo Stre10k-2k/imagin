@@ -9,18 +9,53 @@
 }
 body{
     background-color: #41179d;
+    width: 100%;
+    height: 100%;
 }
-
+nav{
+    margin: 30px 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_imajin{
+    display: flex;
+    align-items: center;
+}
+.nav_photo{
+    width: 54px;
+}
+.nav_title{
+    font-size: 36px;
+    font-weight: 500;
+}
+.nav_list{
+    display: flex;
+}
+.nav_links{
+    margin: 0px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 114px;
+    height: 39px;
+    text-align: center;
+    padding: 20px;
+}
+.nav_links:hover{
+    color: #651FFF;
+    background-color: #D1C4E9;
+    border-radius: 39px;
+}
 .sign_container{
     height: 100%;
-    margin: 100px 150px;
+    margin: 50px 250px;
     background-color: #00000080;
     border-radius: 60px;
-    height: 600px;
+    height: 800px;
     display: flex;
 }
 .sign_img{
-    height: 600px;
+    height: 800px;
 }
 .sign{
     margin: 40px;
@@ -64,12 +99,24 @@ body{
     margin-right: 10px;
 }
 .checkbox{
+    width: 539px;
+    height: 37px;
     display: flex;
     align-items: center;
+    margin: 20px 0;
 }
 .checktext{
     font-size: 16px;
     margin-left: 10px;
+}
+.msg{
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid white;
+    border-radius: 39px;
+}
+.msg_text{
+    color: white;
 }
 .sign_btn{
     width: 539px;
@@ -81,4 +128,64 @@ body{
     border: 1px solid #651FFF;
     border-radius: 39px;
     margin: 12px 0;
+}
+.contact_sec{
+    justify-self: center;
+    width: 596px;
+    padding: 40px 10px;
+    margin: 50px 350px;
+    background-color: #00000080;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.contact_container{
+    margin: 20px 0;
+}
+.contact_title{
+    font-size: 64px;
+    font-weight: 800;
+    margin: 50px 0;
+}
+.contact_box{
+    margin-left: 25px;
+}
+.coming_sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 150px 350px;
+}
+.contact_text{
+    width: 539px;
+    height: 96px;
+    margin: 12px 0;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.127);
+    border: 1px solid gray;
+}
+.coming_title{
+    font-weight: 800;
+    font-size: 72px;
+}
+.time{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    border-radius: 17px;
+    background-color: #00000033;
+    padding: 50px;
+}
+.coming_subtitle{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 40px 0;
+}
+.coming_list{
+    margin: 50px 0;
 }

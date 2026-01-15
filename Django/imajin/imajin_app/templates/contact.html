@@ -1,0 +1,35 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+
+    {% block title %}<title>Login</title>{% endblock %}
+    {% block  section%}
+        <section class="contact_sec">
+            <div class="contact_container">
+                <h1 class="contact_title">Contact Us</h1>
+                <p class="contact_subtitle">Aenean sit amet magna vel magna fringilla <br> fermentum. Donec sit amet nulla sed arcu pulvinar <br> commodo id ligula.</p>
+            </div>
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <input type="text" name="name" class="text_input" placeholder="Enter Your Name">
+                <input type="text" name="email" class="text_input" placeholder="Enter Your Email">
+                <input type="text" name="phone" class="text_input" placeholder="Enter Your Phone">
+                <input type="text" name="company" class="text_input" placeholder="Enter Your Company">
+                <input type="text" name="text" class="contact_text" placeholder="Enter Your Message">
+                <div class="checkbox contact_box">
+                    <input type="checkbox" name="" id="">
+                    <p class="checktext">I have read and accept the Terms of <br> Service & Privacy Policy *</p>
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="msg">
+                            <p class="msg_text">{{ message }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <button class="sign_btn">Continiue</button>
+            </form>
+        </section>
+    {% endblock section %}

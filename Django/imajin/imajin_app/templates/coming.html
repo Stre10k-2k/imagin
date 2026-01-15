@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="coming_sec">
+        <div class="nav_imajin">
+            <img class="nav_photo" src="{% static 'imgs/Luxi-Hosting-Logo.png' %}" alt="logo.png">
+            <h1 class="nav_title">IMAGIN</h1>
+        </div>
+        <h1 class="coming_title">Coming Soon</h1>
+        <h2 class="time">2 MONTHS : 12 DAYS : 40 HOURS : 11 MINS</h2>
+        <p class="coming_subtitle">Will come with performance in design</p>
+        <ul class="nav_list coming_list">
+            <li class="nav_items">
+                <a class="nav_links" href="http://127.0.0.1:8000/login/">LOGIN</a>
+            </li>
+            <li class="nav_items">
+                <a class="nav_links" href="http://127.0.0.1:8000/signup/">SIGN UP</a>
+            </li>
+            <li class="nav_items">
+                <a class="nav_links" href="http://127.0.0.1:8000/contact/">CONTACT US</a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

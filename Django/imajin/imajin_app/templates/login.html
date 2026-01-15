@@ -2,16 +2,15 @@
 
 {% load static %}
 
-    {% block title %}<title>Sign Up</title>{% endblock %}
+    {% block title %}<title>Login</title>{% endblock %}
     {% block  section%}
-
         <section>
             <div class="sign_container">
                 <div class="sign_photo">
-                    <img class="sign_img" src="{% static 'imgs/Welcome.png' %}" alt="">
+                    <img class="sign_img" src="{% static 'imgs/Welcomeback.png' %}" alt="">
                 </div>
                 <div class="sign">
-                    <h1 class="title">Register</h1>
+                    <h1 class="title">Log In</h1>
                     <ul class="links">
                         <li class="link_item">
                             <a href=""><img src="{% static '/imgs/Facebook Login.png' %}" alt="Facebook"></a>
@@ -27,16 +26,8 @@
 
                         {% csrf_token %}
 
-                        <input class="text_input" type="text" name="first_name" placeholder="Name">
                         <input class="text_input" type="text" name="email" placeholder="Email">
-                        <div>
-                            <input class="sign_password" type="text" name="password" placeholder="Password">
-                            <input class="sign_password" type="text" name="confirm_password" placeholder="Repeat Password">
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="" id="">
-                            <p class="checktext">I have read and accept the Terms of <br> Service & Privacy Policy *</p>
-                        </div>
+                        <input class="text_input" type="text" name="password" placeholder="Password">
                         {% if messages %}
                             {% for message in messages %}
                                 <div class="msg">
@@ -49,4 +40,4 @@
                 </div>
             </div>
         </section>
-    {% endblock %}
+    {% endblock section %}
