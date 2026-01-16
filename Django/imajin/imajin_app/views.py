@@ -14,7 +14,7 @@ def sign_up(request):
         if name == "" or email == "" or password == "":
             messages.error(request, 'You must fill all gaps')
             return redirect("signup")
-
+        
         if User.objects.filter(email=email).exists():
             messages.error(request, "Email already in use")
             return redirect("signup")
@@ -55,7 +55,7 @@ def log_in(request):
 
         user = authenticate(request, username=username, password=password)
 
-        if user == True:
+        if user:
             login(request, user)
             return redirect("coming")
         
@@ -71,6 +71,10 @@ def contact_us(request):
         phone = request.POST.get("phone", "") or ""
         company = request.POST.get("company", "") or ""
         msg = request.POST.get("text", "")
+
+        if phone.isdigit() != True:
+            messages.error(request, 'Phone must be number')
+            return redirect("contact")
 
         if msg == "":
             messages.error(request, "Please write your message")
